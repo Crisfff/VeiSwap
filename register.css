@@ -86,7 +86,7 @@ svg { display: block; }
 }
 
 .center-logo {
-  background-size: 155% auto;
+  background-size: 145% auto;
 }
 
 .back-link {
@@ -282,14 +282,15 @@ svg { display: block; }
   }
 
   .auth-mark {
-    width: 116px;
-    height: 56px;
+    width: 126px;
+    height: 58px;
     margin: 0 auto 8px;
     overflow: hidden;
   }
 
   .center-logo {
-    background-size: 165% auto;
+    background-size: 125% auto;
+    background-position: center;
   }
 
   .auth-card h1 {
