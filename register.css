@@ -20,6 +20,7 @@ body {
   font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
   background: var(--bg);
   color: var(--ink);
+  overflow-x: hidden;
 }
 
 a {
@@ -44,17 +45,19 @@ img {
 
 .auth-shell {
   min-height: 100vh;
+  min-height: 100dvh;
   position: relative;
   display: grid;
   place-items: center;
-  padding: 72px 24px 86px;
-  overflow: hidden;
+  padding: 72px 24px 96px;
+  overflow-x: hidden;
+  overflow-y: visible;
   isolation: isolate;
 }
 
 .auth-shell::before {
   content: "";
-  position: absolute;
+  position: fixed;
   inset: 0;
   z-index: -2;
   background:
@@ -65,7 +68,7 @@ img {
 
 .auth-shell::after {
   content: "";
-  position: absolute;
+  position: fixed;
   z-index: -1;
   left: 0;
   top: 0;
@@ -93,8 +96,8 @@ img {
 }
 
 .auth-brand img {
-  width: 48px;
-  height: 48px;
+  width: 72px;
+  height: 72px;
   object-fit: contain;
 }
 
@@ -136,9 +139,9 @@ img {
 }
 
 .auth-mark {
-  width: 74px;
-  height: 74px;
-  margin: 0 auto 18px;
+  width: 112px;
+  height: 76px;
+  margin: 0 auto 16px;
   display: grid;
   place-items: center;
 }
@@ -360,23 +363,24 @@ img {
 
 @media (max-width: 640px) {
   .auth-shell {
-    place-items: start center;
-    padding: 104px 20px 110px;
+    display: block;
+    min-height: 100dvh;
+    padding: 88px 20px calc(36px + env(safe-area-inset-bottom));
   }
 
   .auth-brand {
     left: 18px;
-    top: 18px;
+    top: 16px;
   }
 
   .auth-brand img {
-    width: 42px;
-    height: 42px;
+    width: 54px;
+    height: 54px;
   }
 
   .back-link {
     right: 18px;
-    top: 20px;
+    top: 22px;
   }
 
   .back-link span {
@@ -385,12 +389,40 @@ img {
 
   .auth-card {
     width: 100%;
-    padding: 0;
+    max-width: 430px;
+    margin: 0 auto;
   }
 
   .auth-mark {
-    width: 68px;
-    height: 68px;
+    width: 92px;
+    height: 58px;
+    margin-bottom: 10px;
+  }
+
+  .auth-card h1 {
+    font-size: clamp(2.35rem, 11vw, 3rem);
+  }
+
+  .auth-subtitle {
+    margin: 10px auto 22px;
+  }
+
+  .field-label:not(:first-child) {
+    margin-top: 12px;
+  }
+
+  .input-wrap,
+  .email-button,
+  .google-button {
+    min-height: 48px;
+  }
+
+  .auth-divider {
+    margin: 16px 0;
+  }
+
+  .signin-copy {
+    margin-top: 18px;
   }
 
   .auth-shell::after {
@@ -399,6 +431,10 @@ img {
   }
 
   .auth-legal {
-    bottom: 18px;
+    position: static;
+    width: min(100%, 620px);
+    transform: none;
+    margin: 26px auto 0;
+    padding-bottom: calc(8px + env(safe-area-inset-bottom));
   }
 }
