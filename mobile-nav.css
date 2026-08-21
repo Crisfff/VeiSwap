@@ -12,6 +12,10 @@
     flex: 0 1 auto;
   }
 
+  .nav-actions {
+    display: none !important;
+  }
+
   .mobile-signup {
     display: inline-flex;
     align-items: center;
