@@ -210,17 +210,24 @@ svg {
 }
 
 .hero-copy {
-  width: min(100%, 860px);
-  font-family: "Manrope", "Inter", system-ui, sans-serif;
+  width: min(100%, 880px);
+  font-family: "Inter Tight", "Arial Narrow", sans-serif;
 }
 
 h1 {
-  margin: 0 0 24px;
-  font-family: "Manrope", "Inter", system-ui, sans-serif;
-  font-size: clamp(3.7rem, 7.25vw, 6.9rem);
-  line-height: 0.94;
-  letter-spacing: -0.058em;
-  font-weight: 800;
+  margin: 0 0 22px;
+  font-family: "Inter Tight", "Arial Narrow", sans-serif !important;
+  font-size: clamp(3.85rem, 7.4vw, 7rem);
+  line-height: 0.89;
+  letter-spacing: -0.055em;
+  font-weight: 900;
+  font-stretch: condensed;
+}
+
+.hero-title-outline,
+.hero-title-solid {
+  font-family: "Inter Tight", "Arial Narrow", sans-serif !important;
+  font-weight: 900;
 }
 
 .hero-title-outline {
@@ -234,14 +241,14 @@ h1 {
 }
 
 .hero-description {
-  max-width: 690px;
+  max-width: 700px;
   margin: 0;
   color: var(--muted);
-  font-family: "Manrope", "Inter", system-ui, sans-serif;
-  font-size: clamp(1rem, 1.55vw, 1.12rem);
-  font-weight: 500;
-  line-height: 1.58;
-  letter-spacing: -0.018em;
+  font-family: "Inter Tight", "Arial Narrow", sans-serif !important;
+  font-size: clamp(1rem, 1.55vw, 1.14rem);
+  font-weight: 600;
+  line-height: 1.48;
+  letter-spacing: -0.025em;
 }
 
 .hero-actions {
@@ -310,7 +317,7 @@ h1 {
   }
 
   h1 {
-    font-size: clamp(3.25rem, 16.5vw, 5.1rem);
+    font-size: clamp(3.3rem, 17vw, 5.25rem);
   }
 
   .hero-actions {
