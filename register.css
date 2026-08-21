@@ -266,10 +266,7 @@ svg { display: block; }
   }
 
   .auth-brand {
-    left: 16px;
-    top: 12px;
-    width: 58px;
-    height: 38px;
+    display: none;
   }
 
   .back-link {
