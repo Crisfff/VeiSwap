@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="theme-color" content="#050505" />
+  <meta name="theme-color" content="#171717" />
   <meta name="description" content="VeiSwap, mercado P2P no custodial para intercambiar USDT directamente entre personas." />
   <title>VeiSwap — P2P entre personas</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -15,9 +15,8 @@
   <main class="hero-shell">
     <nav class="nav container" aria-label="Navegación principal">
       <a class="brand" href="#" aria-label="VeiSwap inicio">
-        <span class="brand-mark" aria-hidden="true">
-          <span></span>
-          <span></span>
+        <span class="brand-icon" aria-hidden="true">
+          <i data-lucide="repeat-2"></i>
         </span>
         <span class="brand-name">VeiSwap</span>
       </a>
@@ -31,20 +30,22 @@
 
       <div class="nav-actions">
         <a class="btn btn-ghost" href="#login">Iniciar sesión</a>
-        <a class="btn btn-primary" href="#registro">Crear cuenta</a>
+        <a class="btn btn-primary" href="#registro">
+          Crear cuenta
+          <i data-lucide="arrow-up-right" aria-hidden="true"></i>
+        </a>
       </div>
 
       <button class="menu-toggle" id="menuToggle" type="button" aria-label="Abrir menú" aria-expanded="false">
-        <span></span>
-        <span></span>
+        <i data-lucide="menu" aria-hidden="true"></i>
       </button>
     </nav>
 
     <section class="hero container">
       <div class="hero-copy">
         <div class="eyebrow">
-          <span class="eyebrow-dot"></span>
-          P2P no custodial
+          <i data-lucide="shield-check" aria-hidden="true"></i>
+          <span>P2P no custodial</span>
         </div>
 
         <h1>
@@ -58,57 +59,20 @@
         </p>
 
         <div class="hero-actions">
-          <a class="btn btn-primary btn-large" href="#mercado">Explorar mercado</a>
+          <a class="btn btn-primary btn-large" href="#mercado">
+            Explorar mercado
+            <i data-lucide="arrow-right" aria-hidden="true"></i>
+          </a>
           <a class="btn btn-secondary btn-large" href="#como-funciona">
             Cómo funciona
-            <span aria-hidden="true">→</span>
+            <i data-lucide="circle-play" aria-hidden="true"></i>
           </a>
-        </div>
-      </div>
-
-      <div class="hero-status" aria-label="Resumen de VeiSwap">
-        <div class="status-line">
-          <span>Custodia de fondos</span>
-          <strong>No</strong>
-        </div>
-        <div class="status-line">
-          <span>Comisión anunciante</span>
-          <strong>0,25%</strong>
-        </div>
-        <div class="status-line">
-          <span>Operaciones</span>
-          <strong>P2P</strong>
-        </div>
-      </div>
-    </section>
-
-    <section class="trust-bar container" aria-label="Características principales">
-      <div class="trust-item">
-        <span class="trust-number">01</span>
-        <div>
-          <strong>Fondos bajo tu control</strong>
-          <p>VeiSwap no funciona como una cartera custodial.</p>
-        </div>
-      </div>
-
-      <div class="trust-item">
-        <span class="trust-number">02</span>
-        <div>
-          <strong>Mercado entre personas</strong>
-          <p>Encuentra ofertas y negocia directamente con otros usuarios.</p>
-        </div>
-      </div>
-
-      <div class="trust-item">
-        <span class="trust-number">03</span>
-        <div>
-          <strong>Tarifa simple</strong>
-          <p>0,25% para el anunciante solo cuando una orden se completa.</p>
         </div>
       </div>
     </section>
   </main>
 
+  <script src="https://unpkg.com/lucide@0.468.0/dist/umd/lucide.min.js"></script>
   <script src="app.js"></script>
 </body>
 </html>
