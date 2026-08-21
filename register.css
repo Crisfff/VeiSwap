@@ -18,7 +18,7 @@ body {
 a { color: inherit; text-decoration: none; }
 button, input { font: inherit; }
 button, a { -webkit-tap-highlight-color: transparent; }
-svg, img { display: block; }
+svg { display: block; }
 
 .auth-shell {
   min-height: 100vh;
@@ -68,16 +68,21 @@ svg, img { display: block; }
   left: 34px;
   display: inline-flex;
   align-items: center;
-  width: 72px;
-  height: 72px;
+  justify-content: center;
+  width: 82px;
+  height: 58px;
   overflow: hidden;
 }
-.auth-brand img {
+
+.brand-logo,
+.center-logo {
+  display: block;
   width: 100%;
   height: 100%;
-  max-width: 100%;
-  max-height: 100%;
-  object-fit: contain;
+  background-image: url("assets/veiswap-logo.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
 }
 
 .back-link {
@@ -105,19 +110,10 @@ svg, img { display: block; }
 }
 
 .auth-mark {
-  width: 132px;
-  height: 88px;
+  width: 180px;
+  height: 96px;
   margin: 0 auto 14px;
-  display: grid;
-  place-items: center;
   overflow: hidden;
-}
-.auth-mark img {
-  width: 100%;
-  height: 100%;
-  max-width: 100%;
-  max-height: 100%;
-  object-fit: contain;
 }
 
 .auth-card h1 {
@@ -262,14 +258,14 @@ svg, img { display: block; }
   .auth-shell {
     display: block;
     min-height: 100dvh;
-    padding: 58px 18px calc(24px + env(safe-area-inset-bottom));
+    padding: 64px 18px calc(30px + env(safe-area-inset-bottom));
   }
 
   .auth-brand {
     left: 16px;
     top: 12px;
-    width: 42px;
-    height: 42px;
+    width: 58px;
+    height: 38px;
   }
 
   .back-link {
@@ -285,9 +281,9 @@ svg, img { display: block; }
   }
 
   .auth-mark {
-    width: 86px;
-    height: 42px;
-    margin: 0 auto 6px;
+    width: 112px;
+    height: 54px;
+    margin: 0 auto 8px;
     overflow: hidden;
   }
 
@@ -298,7 +294,7 @@ svg, img { display: block; }
 
   .auth-subtitle {
     max-width: 290px;
-    margin: 8px auto 16px;
+    margin: 8px auto 18px;
     font-size: .84rem;
     line-height: 1.38;
   }
@@ -307,21 +303,21 @@ svg, img { display: block; }
     margin-bottom: 5px;
     font-size: .74rem;
   }
-  .field-label:not(:first-child) { margin-top: 9px; }
+  .field-label:not(:first-child) { margin-top: 10px; }
 
   .input-wrap,
   .email-button,
   .google-button {
-    min-height: 44px;
+    min-height: 46px;
     border-radius: 11px;
   }
 
-  .input-wrap input { height: 42px; font-size: .88rem; }
+  .input-wrap input { height: 44px; font-size: .88rem; }
   .input-wrap > svg { margin-left: 13px; }
   .password-toggle { width: 38px; height: 38px; }
 
   .form-message {
-    min-height: 10px;
+    min-height: 12px;
     margin-top: 6px;
     font-size: .72rem;
   }
@@ -332,13 +328,13 @@ svg, img { display: block; }
   }
 
   .auth-divider {
-    margin: 10px 0;
+    margin: 12px 0;
   }
 
-  .google-button { min-height: 44px; }
+  .google-button { min-height: 46px; }
 
   .signin-copy {
-    margin-top: 12px;
+    margin-top: 14px;
     font-size: .8rem;
   }
 
@@ -351,8 +347,8 @@ svg, img { display: block; }
     position: static;
     width: min(100%, 620px);
     transform: none;
-    margin: 18px auto 0;
-    padding-bottom: calc(6px + env(safe-area-inset-bottom));
+    margin: 20px auto 0;
+    padding-bottom: calc(8px + env(safe-area-inset-bottom));
     font-size: .66rem;
   }
 }
