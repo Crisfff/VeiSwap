@@ -203,21 +203,25 @@ svg {
   position: relative;
   z-index: 2;
   min-height: calc(100vh - 88px);
-  display: flex;
+  display: grid;
+  grid-template-columns: minmax(0, 1.15fr) minmax(300px, 0.85fr);
   align-items: center;
+  gap: 42px;
   padding-top: 76px;
   padding-bottom: 110px;
 }
 
 .hero-copy {
-  width: min(100%, 880px);
+  width: min(100%, 720px);
   font-family: "Inter Tight", "Arial Narrow", sans-serif;
+  position: relative;
+  z-index: 2;
 }
 
 h1 {
   margin: 0 0 22px;
   font-family: "Inter Tight", "Arial Narrow", sans-serif !important;
-  font-size: clamp(3.85rem, 7.4vw, 7rem);
+  font-size: clamp(3.85rem, 6.9vw, 6.7rem);
   line-height: 0.89;
   letter-spacing: -0.055em;
   font-weight: 900;
@@ -241,11 +245,11 @@ h1 {
 }
 
 .hero-description {
-  max-width: 700px;
+  max-width: 650px;
   margin: 0;
   color: var(--muted);
   font-family: "Inter Tight", "Arial Narrow", sans-serif !important;
-  font-size: clamp(1rem, 1.55vw, 1.14rem);
+  font-size: clamp(1rem, 1.4vw, 1.12rem);
   font-weight: 600;
   line-height: 1.48;
   letter-spacing: -0.025em;
@@ -258,13 +262,42 @@ h1 {
   margin-top: 34px;
 }
 
+.hero-visual {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  min-width: 0;
+  pointer-events: none;
+}
+
+.hero-visual img {
+  display: block;
+  width: min(100%, 540px);
+  max-height: 610px;
+  height: auto;
+  object-fit: contain;
+  object-position: center;
+  user-select: none;
+}
+
 @media (max-width: 980px) {
   .nav-links {
     display: none;
   }
 
   .hero {
+    grid-template-columns: minmax(0, 1.08fr) minmax(260px, 0.72fr);
+    gap: 26px;
     padding-top: 86px;
+  }
+
+  h1 {
+    font-size: clamp(3.55rem, 7.3vw, 5.7rem);
+  }
+
+  .hero-visual img {
+    width: min(100%, 440px);
   }
 }
 
@@ -312,6 +345,8 @@ h1 {
 
   .hero {
     min-height: calc(100vh - 76px);
+    grid-template-columns: 1fr;
+    gap: 46px;
     padding-top: 72px;
     padding-bottom: 70px;
   }
@@ -327,5 +362,14 @@ h1 {
 
   .btn-large {
     width: 100%;
+  }
+
+  .hero-visual {
+    justify-content: center;
+  }
+
+  .hero-visual img {
+    width: min(92%, 460px);
+    max-height: 500px;
   }
 }
