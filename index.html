@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#050505" />
+  <meta name="description" content="VeiSwap, mercado P2P no custodial para intercambiar USDT directamente entre personas." />
+  <title>VeiSwap — P2P entre personas</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="hero-shell">
+    <nav class="nav container" aria-label="Navegación principal">
+      <a class="brand" href="#" aria-label="VeiSwap inicio">
+        <span class="brand-mark" aria-hidden="true">
+          <span></span>
+          <span></span>
+        </span>
+        <span class="brand-name">VeiSwap</span>
+      </a>
+
+      <div class="nav-links" id="navLinks">
+        <a href="#mercado">Mercado P2P</a>
+        <a href="#como-funciona">Cómo funciona</a>
+        <a href="#seguridad">Seguridad</a>
+        <a href="#tarifas">Tarifas</a>
+      </div>
+
+      <div class="nav-actions">
+        <a class="btn btn-ghost" href="#login">Iniciar sesión</a>
+        <a class="btn btn-primary" href="#registro">Crear cuenta</a>
+      </div>
+
+      <button class="menu-toggle" id="menuToggle" type="button" aria-label="Abrir menú" aria-expanded="false">
+        <span></span>
+        <span></span>
+      </button>
+    </nav>
+
+    <section class="hero container">
+      <div class="hero-copy">
+        <div class="eyebrow">
+          <span class="eyebrow-dot"></span>
+          P2P no custodial
+        </div>
+
+        <h1>
+          Tu dinero.<br />
+          <span>Tu control.</span>
+        </h1>
+
+        <p class="hero-description">
+          Compra y vende USDT directamente entre personas. VeiSwap conecta las partes,
+          protege la operación y tú mantienes el control de tus fondos.
+        </p>
+
+        <div class="hero-actions">
+          <a class="btn btn-primary btn-large" href="#mercado">Explorar mercado</a>
+          <a class="btn btn-secondary btn-large" href="#como-funciona">
+            Cómo funciona
+            <span aria-hidden="true">→</span>
+          </a>
+        </div>
+      </div>
+
+      <div class="hero-status" aria-label="Resumen de VeiSwap">
+        <div class="status-line">
+          <span>Custodia de fondos</span>
+          <strong>No</strong>
+        </div>
+        <div class="status-line">
+          <span>Comisión anunciante</span>
+          <strong>0,25%</strong>
+        </div>
+        <div class="status-line">
+          <span>Operaciones</span>
+          <strong>P2P</strong>
+        </div>
+      </div>
+    </section>
+
+    <section class="trust-bar container" aria-label="Características principales">
+      <div class="trust-item">
+        <span class="trust-number">01</span>
+        <div>
+          <strong>Fondos bajo tu control</strong>
+          <p>VeiSwap no funciona como una cartera custodial.</p>
+        </div>
+      </div>
+
+      <div class="trust-item">
+        <span class="trust-number">02</span>
+        <div>
+          <strong>Mercado entre personas</strong>
+          <p>Encuentra ofertas y negocia directamente con otros usuarios.</p>
+        </div>
+      </div>
+
+      <div class="trust-item">
+        <span class="trust-number">03</span>
+        <div>
+          <strong>Tarifa simple</strong>
+          <p>0,25% para el anunciante solo cuando una orden se completa.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
