@@ -22,7 +22,7 @@
       <span>Volver</span>
     </a>
 
-    <section class="auth-card" aria-labelledby="registerTitle">
+    <section class="auth-card" id="registerStep" aria-labelledby="registerTitle">
       <div class="auth-mark" aria-hidden="true">
         <span class="center-logo"></span>
       </div>
@@ -57,7 +57,7 @@
 
         <p class="form-message" id="formMessage" role="status" aria-live="polite"></p>
 
-        <button class="email-button" type="submit">
+        <button class="email-button" id="registerButton" type="submit">
           <span>Continuar con correo</span>
           <i data-lucide="arrow-right" aria-hidden="true"></i>
         </button>
@@ -83,6 +83,41 @@
         ¿Ya tienes una cuenta?
         <a href="login.html">Iniciar sesión</a>
       </p>
+    </section>
+
+    <section class="auth-card otp-card" id="otpStep" aria-labelledby="otpTitle" hidden>
+      <div class="auth-mark" aria-hidden="true">
+        <span class="center-logo"></span>
+      </div>
+
+      <div class="otp-badge" aria-hidden="true">OTP</div>
+      <h1 id="otpTitle">Verifica tu correo</h1>
+      <p class="auth-subtitle otp-subtitle">
+        Introduce el código de 6 dígitos que enviamos a <strong id="otpEmail"></strong>.
+      </p>
+
+      <form class="otp-form" id="otpForm" novalidate>
+        <div class="otp-inputs" id="otpInputs" aria-label="Código de verificación de 6 dígitos">
+          <input class="otp-input" inputmode="numeric" autocomplete="one-time-code" maxlength="1" aria-label="Dígito 1" />
+          <input class="otp-input" inputmode="numeric" maxlength="1" aria-label="Dígito 2" />
+          <input class="otp-input" inputmode="numeric" maxlength="1" aria-label="Dígito 3" />
+          <input class="otp-input" inputmode="numeric" maxlength="1" aria-label="Dígito 4" />
+          <input class="otp-input" inputmode="numeric" maxlength="1" aria-label="Dígito 5" />
+          <input class="otp-input" inputmode="numeric" maxlength="1" aria-label="Dígito 6" />
+        </div>
+
+        <p class="form-message otp-message" id="otpMessage" role="status" aria-live="polite"></p>
+
+        <button class="email-button verify-button" id="verifyButton" type="submit">
+          <span>Verificar código</span>
+          <i data-lucide="check" aria-hidden="true"></i>
+        </button>
+
+        <button class="otp-back" id="otpBack" type="button">
+          <i data-lucide="arrow-left" aria-hidden="true"></i>
+          Cambiar correo
+        </button>
+      </form>
     </section>
 
     <p class="auth-legal">
