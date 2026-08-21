@@ -5,6 +5,13 @@ if (window.lucide) {
   window.lucide.createIcons();
 }
 
+document.querySelectorAll('a[href="#login"]').forEach((link) => {
+  link.addEventListener('click', (event) => {
+    event.preventDefault();
+    window.location.href = 'login.html';
+  });
+});
+
 if (menuToggle && navLinks) {
   menuToggle.addEventListener('click', () => {
     const isOpen = navLinks.classList.toggle('open');
