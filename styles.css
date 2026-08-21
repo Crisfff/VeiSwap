@@ -246,7 +246,9 @@ h1 {
 }
 
 h1 span {
-  color: #dfe4ff;
+  color: #171717;
+  -webkit-text-stroke: 2px var(--indigo-white);
+  paint-order: stroke fill;
 }
 
 .hero-description {
