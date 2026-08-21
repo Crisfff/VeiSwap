@@ -79,7 +79,7 @@ svg { display: block; }
   display: block;
   width: 100%;
   height: 100%;
-  background-image: url("assets/veiswap-logo.png");
+  background-image: url("assets/veiswap-logo.svg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
