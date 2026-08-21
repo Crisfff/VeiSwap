@@ -19,6 +19,7 @@ a { color: inherit; text-decoration: none; }
 button, input { font: inherit; }
 button, a { -webkit-tap-highlight-color: transparent; }
 svg { display: block; }
+[hidden] { display: none !important; }
 
 .auth-shell {
   min-height: 100vh;
@@ -63,7 +64,6 @@ svg { display: block; }
   top: 30px;
   z-index: 5;
 }
-
 .auth-brand {
   left: 34px;
   display: inline-flex;
@@ -73,7 +73,6 @@ svg { display: block; }
   height: 58px;
   overflow: hidden;
 }
-
 .brand-logo,
 .center-logo {
   display: block;
@@ -84,10 +83,7 @@ svg { display: block; }
   background-position: center;
   background-size: contain;
 }
-
-.center-logo {
-  background-size: 118% auto;
-}
+.center-logo { background-size: 118% auto; }
 
 .back-link {
   right: 34px;
@@ -112,14 +108,12 @@ svg { display: block; }
   background: transparent;
   box-shadow: none;
 }
-
 .auth-mark {
   width: 122px;
   height: 60px;
   margin: 0 auto 9px;
   overflow: hidden;
 }
-
 .auth-card h1 {
   margin: 0;
   text-align: center;
@@ -145,7 +139,6 @@ svg { display: block; }
   font-weight: 700;
 }
 .field-label:not(:first-child) { margin-top: 16px; }
-
 .input-wrap {
   min-height: 50px;
   position: relative;
@@ -201,7 +194,6 @@ svg { display: block; }
   font-size: .78rem;
   font-weight: 600;
 }
-
 .email-button, .google-button {
   width: 100%;
   min-height: 50px;
@@ -219,6 +211,7 @@ svg { display: block; }
   color: #eef2ff;
   font-weight: 750;
 }
+.email-button:disabled { opacity: .55; cursor: wait; }
 .email-button svg { width: 18px; height: 18px; }
 .auth-divider {
   display: grid;
@@ -244,6 +237,84 @@ svg { display: block; }
   font-size: .84rem;
 }
 .signin-copy a { color: #171717; font-weight: 750; }
+
+.otp-card { text-align: center; }
+.otp-card .auth-mark { margin-bottom: 14px; }
+.otp-badge {
+  width: 64px;
+  height: 64px;
+  margin: 0 auto 20px;
+  display: grid;
+  place-items: center;
+  border: 1px solid rgba(23,23,23,.13);
+  border-radius: 18px;
+  background: rgba(255,255,255,.55);
+  box-shadow: 0 12px 34px rgba(23,23,23,.06);
+  color: #171717;
+  font-family: "Inter Tight", sans-serif;
+  font-size: .92rem;
+  font-weight: 900;
+  letter-spacing: .08em;
+}
+.otp-subtitle {
+  max-width: 350px;
+  margin-bottom: 24px;
+}
+.otp-subtitle strong {
+  display: block;
+  margin-top: 3px;
+  color: rgba(23,23,23,.82);
+  font-weight: 750;
+  overflow-wrap: anywhere;
+}
+.otp-form { display: grid; }
+.otp-inputs {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 9px;
+}
+.otp-input {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  min-width: 0;
+  border: 1px solid rgba(23,23,23,.14);
+  border-radius: 14px;
+  outline: 0;
+  background: rgba(255,255,255,.62);
+  color: #171717;
+  text-align: center;
+  font-family: "Inter Tight", sans-serif;
+  font-size: 1.35rem;
+  font-weight: 800;
+  caret-color: #171717;
+  transition: border-color .16s ease, box-shadow .16s ease, background .16s ease, transform .16s ease;
+}
+.otp-input:focus {
+  border-color: rgba(23,23,23,.48);
+  background: rgba(255,255,255,.88);
+  box-shadow: 0 0 0 4px rgba(23,23,23,.055);
+  transform: translateY(-1px);
+}
+.otp-input.filled { border-color: rgba(23,23,23,.32); }
+.otp-message { text-align: left; margin-top: 12px; }
+.verify-button { margin-top: 2px; }
+.otp-back {
+  justify-self: center;
+  margin-top: 16px;
+  padding: 8px 12px;
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  border: 0;
+  background: transparent;
+  color: rgba(23,23,23,.58);
+  cursor: pointer;
+  font-size: .8rem;
+  font-weight: 700;
+}
+.otp-back:hover { color: #171717; }
+.otp-back svg { width: 15px; height: 15px; }
+
 .auth-legal {
   position: absolute;
   left: 50%;
@@ -264,91 +335,31 @@ svg { display: block; }
     min-height: 100dvh;
     padding: 64px 18px calc(30px + env(safe-area-inset-bottom));
   }
-
-  .auth-brand {
-    display: none;
-  }
-
-  .back-link {
-    right: 16px;
-    top: 18px;
-  }
+  .auth-brand { display: none; }
+  .back-link { right: 16px; top: 18px; }
   .back-link span { display: none; }
-
-  .auth-card {
-    width: 100%;
-    max-width: 430px;
-    margin: 0 auto;
-  }
-
+  .auth-card { width: 100%; max-width: 430px; margin: 0 auto; }
   .auth-mark {
     width: 108px;
     height: 52px;
     margin: 0 auto 7px;
     overflow: hidden;
   }
-
-  .center-logo {
-    background-size: contain;
-    background-position: center;
-  }
-
-  .auth-card h1 {
-    font-size: clamp(2rem, 9.6vw, 2.55rem);
-    line-height: .96;
-  }
-
-  .auth-subtitle {
-    max-width: 290px;
-    margin: 8px auto 18px;
-    font-size: .84rem;
-    line-height: 1.38;
-  }
-
-  .field-label {
-    margin-bottom: 5px;
-    font-size: .74rem;
-  }
+  .center-logo { background-size: contain; background-position: center; }
+  .auth-card h1 { font-size: clamp(2rem, 9.6vw, 2.55rem); line-height: .96; }
+  .auth-subtitle { max-width: 290px; margin: 8px auto 18px; font-size: .84rem; line-height: 1.38; }
+  .field-label { margin-bottom: 5px; font-size: .74rem; }
   .field-label:not(:first-child) { margin-top: 10px; }
-
-  .input-wrap,
-  .email-button,
-  .google-button {
-    min-height: 46px;
-    border-radius: 11px;
-  }
-
+  .input-wrap, .email-button, .google-button { min-height: 46px; border-radius: 11px; }
   .input-wrap input { height: 44px; font-size: .88rem; }
   .input-wrap > svg { margin-left: 13px; }
   .password-toggle { width: 38px; height: 38px; }
-
-  .form-message {
-    min-height: 12px;
-    margin-top: 6px;
-    font-size: .72rem;
-  }
-
-  .email-button {
-    margin-top: 0;
-    min-height: 46px;
-  }
-
-  .auth-divider {
-    margin: 12px 0;
-  }
-
+  .form-message { min-height: 12px; margin-top: 6px; font-size: .72rem; }
+  .email-button { margin-top: 0; min-height: 46px; }
+  .auth-divider { margin: 12px 0; }
   .google-button { min-height: 46px; }
-
-  .signin-copy {
-    margin-top: 14px;
-    font-size: .8rem;
-  }
-
-  .auth-shell::after {
-    width: 78vw;
-    opacity: .2;
-  }
-
+  .signin-copy { margin-top: 14px; font-size: .8rem; }
+  .auth-shell::after { width: 78vw; opacity: .2; }
   .auth-legal {
     position: static;
     width: min(100%, 620px);
@@ -357,4 +368,11 @@ svg { display: block; }
     padding-bottom: calc(8px + env(safe-area-inset-bottom));
     font-size: .66rem;
   }
+  .otp-card { padding-top: 2px; }
+  .otp-card .auth-mark { margin-bottom: 10px; }
+  .otp-badge { width: 58px; height: 58px; margin-bottom: 16px; border-radius: 16px; }
+  .otp-subtitle { margin-bottom: 20px; }
+  .otp-inputs { gap: 6px; }
+  .otp-input { border-radius: 12px; font-size: 1.2rem; }
+  .otp-message { margin-top: 9px; }
 }
