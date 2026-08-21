@@ -3,7 +3,6 @@
   --ink: #171717;
   --muted: rgba(23, 23, 23, 0.58);
   --line: rgba(23, 23, 23, 0.12);
-  --panel: rgba(255, 255, 255, 0.38);
   --panel-strong: rgba(255, 255, 255, 0.58);
 }
 
@@ -115,22 +114,22 @@ svg {
 .back-link {
   right: 34px;
   min-height: 38px;
-  padding: 0 12px;
+  padding: 0;
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  border: 1px solid var(--line);
-  border-radius: 10px;
-  background: rgba(255, 255, 255, 0.34);
+  border: 0;
+  border-radius: 0;
+  background: transparent;
   color: rgba(23, 23, 23, 0.7);
   font-size: 0.84rem;
   font-weight: 650;
-  transition: background 160ms ease, transform 160ms ease;
+  transition: color 160ms ease, transform 160ms ease;
 }
 
 .back-link:hover {
-  background: rgba(255, 255, 255, 0.56);
-  transform: translateY(-1px);
+  color: #171717;
+  transform: translateX(-2px);
 }
 
 .back-link svg {
@@ -140,13 +139,13 @@ svg {
 
 .auth-card {
   width: min(100%, 430px);
-  padding: 36px 38px 34px;
-  border: 1px solid rgba(23, 23, 23, 0.1);
-  border-radius: 28px;
-  background: var(--panel);
-  box-shadow: 0 24px 70px rgba(58, 64, 90, 0.11);
-  backdrop-filter: blur(18px);
-  -webkit-backdrop-filter: blur(18px);
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
 }
 
 .auth-mark {
@@ -157,7 +156,7 @@ svg {
   place-items: center;
   border-radius: 16px;
   border: 1px solid rgba(23, 23, 23, 0.12);
-  background: rgba(255, 255, 255, 0.44);
+  background: rgba(255, 255, 255, 0.36);
 }
 
 .auth-mark svg {
@@ -302,8 +301,7 @@ svg {
   border-color: #242424;
 }
 
-.email-button svg,
-.google-button svg {
+.email-button svg {
   width: 18px;
   height: 18px;
   stroke-width: 1.9;
@@ -340,6 +338,12 @@ svg {
   border-color: rgba(23, 23, 23, 0.2);
 }
 
+.google-g {
+  width: 19px;
+  height: 19px;
+  flex: 0 0 auto;
+}
+
 .signin-copy {
   margin: 24px 0 0;
   text-align: center;
@@ -373,7 +377,7 @@ svg {
 @media (max-width: 640px) {
   .auth-shell {
     place-items: start center;
-    padding: 104px 16px 110px;
+    padding: 104px 20px 110px;
   }
 
   .auth-brand {
@@ -392,8 +396,7 @@ svg {
 
   .auth-card {
     width: 100%;
-    padding: 30px 20px 28px;
-    border-radius: 22px;
+    padding: 0;
   }
 
   .auth-shell::after {
